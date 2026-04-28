@@ -1,0 +1,15 @@
+<article class="social-card" aria-label="{{ title() }}">
+  <div class="social-card__header">
+    <img
+      class="social-card__icon"
+      [ngSrc]="imageSrc()"
+      [alt]="imageAlt()"
+      width="32"
+      height="32"
+    />
+    <h3 class="social-card__title">{{ title() }}</h3>
+  </div>
+  <a class="social-card__link" [href]="link()" target="_blank" rel="noopener">
+    {{ linkLabel() }}
+  </a>
+</article>

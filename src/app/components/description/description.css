@@ -1,0 +1,104 @@
+.description {
+  width: 100%;
+}
+
+.terminal-window {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--terminal-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--terminal-body-bg);
+  box-shadow: var(--terminal-glow);
+}
+
+.terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--terminal-title-bg);
+  border-bottom: 1px solid var(--terminal-border-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terminal-title-text);
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.dot--red {
+  background: #ff5f57;
+}
+
+.dot--yellow {
+  background: #febc2e;
+}
+
+.dot--green {
+  background: #28c840;
+}
+
+.terminal-label {
+  margin-left: 0.25rem;
+}
+
+.terminal-body {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: relative;
+}
+
+.terminal-line {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  color: var(--terminal-green);
+}
+
+.prompt {
+  color: var(--terminal-green-soft);
+  font-weight: 600;
+}
+
+.typing {
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.cursor {
+  animation: blink 0.9s steps(1, end) infinite;
+  color: var(--terminal-green);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal-body {
+    padding: 1.5rem;
+  }
+
+  .terminal-window {
+    height: 360px;
+  }
+
+  .terminal-line {
+    flex-wrap: wrap;
+  }
+}

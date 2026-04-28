@@ -1,0 +1,65 @@
+<section class="contact" aria-label="Contact form">
+  <div class="terminal-window">
+    <div class="terminal-title">
+      <span class="dot dot--red" aria-hidden="true"></span>
+      <span class="dot dot--yellow" aria-hidden="true"></span>
+      <span class="dot dot--green" aria-hidden="true"></span>
+      <span class="terminal-label">contact</span>
+    </div>
+    <div class="terminal-body">
+      <h2 class="contact-title">Want to build something?</h2>
+      <p class="contact-subtitle">Send me a message and I will get back to you.</p>
+
+      <form class="contact-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <label class="field">
+          <span class="field-label">Your name</span>
+          <input class="field-input" type="text" formControlName="name" placeholder="Your name" />
+          @if (form.controls.name.touched && form.controls.name.invalid) {
+            <span class="field-error">Please enter your name.</span>
+          }
+        </label>
+
+        <label class="field">
+          <span class="field-label">Your email</span>
+          <input class="field-input" type="email" formControlName="email" placeholder="you@email.com" />
+          @if (form.controls.email.touched && form.controls.email.invalid) {
+            <span class="field-error">Please enter a valid email.</span>
+          }
+        </label>
+
+        <label class="field field--full">
+          <span class="field-label">Message</span>
+          <textarea
+            class="field-input field-input--textarea"
+            rows="5"
+            formControlName="message"
+            placeholder="Tell me about your project..."
+          ></textarea>
+          @if (form.controls.message.touched && form.controls.message.invalid) {
+            <span class="field-error">Please add a message.</span>
+          }
+        </label>
+
+        <button class="submit-button" type="submit" [disabled]="form.invalid || sending()">
+          @if (sending()) {
+            Sending...
+          } @else {
+            Send message
+          }
+        </button>
+      </form>
+
+      @if (successMessage()) {
+        <p class="contact-status contact-status--success" aria-live="polite">
+          {{ successMessage() }}
+        </p>
+      }
+
+      @if (errorMessage()) {
+        <p class="contact-status contact-status--error" aria-live="polite">
+          {{ errorMessage() }}
+        </p>
+      }
+    </div>
+  </div>
+</section>

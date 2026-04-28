@@ -1,0 +1,36 @@
+<app-site-header></app-site-header>
+
+<main class="app-shell">
+  <app-description></app-description>
+  <section class="social-section" aria-label="Social networks.">
+    <app-social-card
+      title="LinkedIn"
+      link="https://www.linkedin.com/in/francisco-mauri47/"
+      imageSrc="/linkedin.svg"
+      imageAlt="LinkedIn logo"
+      linkLabel="Click here to see my professional profile"
+    ></app-social-card>
+    <app-social-card
+      title="Github"
+      link="https://github.com/franmauri47"
+      imageSrc="/github.svg"
+      imageAlt="GitHub logo"
+      linkLabel="Click here to see some projects"
+    ></app-social-card>
+    <app-social-card
+      title="Instagram"
+      link="https://www.instagram.com/hola_frank_/"
+      imageSrc="/instagram.svg"
+      imageAlt="Instagram logo"
+      linkLabel="Click here to know me better"
+    ></app-social-card>
+  </section>
+  <app-contact></app-contact>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__content">
+    <span class="site-footer__name">Francisco Mauri</span>
+    <p class="site-footer__copyright">© {{ currentYear() }} Francisco Mauri. All rights reserved.</p>
+  </div>
+</footer>
