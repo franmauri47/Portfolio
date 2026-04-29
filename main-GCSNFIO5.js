@@ -37,7 +37,7 @@ public class Developer() : IHuman<AfterAll>
     public Experience FrontendDevelopment()
     {
         Has ${this.experienceYears} years of experience in building responsive and user-friendly frontend applications using modern JavaScript 
-        frameworks and libraries, with a focus on Angular.
+        frameworks and libraries, with a focus on Angular;
 
         List<string> Technologies = new List<string>()
         {
