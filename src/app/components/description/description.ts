@@ -33,7 +33,7 @@ public class Developer() : IHuman<AfterAll>
     {
         Has experience in designing and implementing scalable backend systems, RESTful APIs, and microservices architecture.
         With ${this.experienceYears} years of experience in backend development, principal focus on building robust and 
-        efficient backend solutions mostly in .NET environment.
+        efficient backend solutions mostly in .NET environment;
 
         List<string> Technologies = new List<string>()
         {
@@ -55,7 +55,7 @@ public class Developer() : IHuman<AfterAll>
     public Experience FrontendDevelopment()
     {
         Has ${this.experienceYears} years of experience in building responsive and user-friendly frontend applications using modern JavaScript 
-        frameworks and libraries, with a focus on Angular.
+        frameworks and libraries, with a focus on Angular;
 
         List<string> Technologies = new List<string>()
         {
@@ -73,22 +73,22 @@ public class Developer() : IHuman<AfterAll>
 
     public GreatCode Code()
     {
-        Writes code that is clean, efficient, and maintainable.
+        Writes code that is clean, efficient, and maintainable;
     }
 
     public Knowledge Learn()
     {
-        Continuously learns new technologies and programming languages to stay up-to-date with industry trends.
+        Continuously learns new technologies and programming languages to stay up-to-date with industry trends;
     }
 
     public Communication Collaborate()
     {
-        Works effectively with other developers to achieve common goals.
+        Works effectively with other developers to achieve common goals;
     }
 
     public Solution ProblemSolve()
     {
-        Effectively identifies and resolves complex technical issues.
+        Effectively identifies and resolves complex technical issues;
     }
 };
 `;
