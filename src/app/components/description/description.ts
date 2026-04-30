@@ -14,10 +14,11 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DescriptionComponent {
+  private readonly currentYear = new Date().getFullYear();
   private readonly name = 'Francisco Mauri';
   private readonly role = 'Backend Developer';
-  private readonly age = new Date().getFullYear() - 1999;
-  private readonly experienceYears = new Date().getFullYear() - 2022;
+  private readonly age = this.currentYear - 1999;
+  private readonly experienceYears = this.currentYear - 2022;
   private readonly location = 'Cordoba, Argentina';
   private readonly typingDelayMs = 0;
   private readonly fullText = `
